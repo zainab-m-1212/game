@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect><x>0</x><y>0</y><width>800</width><height>600</height></rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="rootLayout">
+    <property name="spacing"><number>12</number></property>
+
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+
+      <widget class="QWidget" name="page_mainMenu">
+       <layout class="QVBoxLayout" name="menuLayout">
+        <property name="spacing"><number>12</number></property>
+
+        <item>
+         <spacer name="menuTopSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+
+        <item>
+         <layout class="QHBoxLayout" name="menuCenterRow">
+          <item>
+           <spacer name="menuLeftSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>120</width><height>20</height></size></property>
+           </spacer>
+          </item>
+
+          <item>
+           <widget class="QFrame" name="menuCard">
+            <property name="minimumSize"><size><width>420</width><height>0</height></size></property>
+            <property name="maximumSize"><size><width>520</width><height>16777215</height></size></property>
+            <property name="frameShape"><enum>QFrame::StyledPanel</enum></property>
+            <layout class="QVBoxLayout" name="menuCardLayout">
+             <property name="spacing"><number>12</number></property>
+
+             <item>
+              <widget class="QLabel" name="label_mainMenu">
+               <property name="text"><string>Main Menu</string></property>
+               <property name="alignment"><set>Qt::AlignCenter</set></property>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QPushButton" name="btn_checkers">
+               <property name="text"><string>Checkers</string></property>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QPushButton" name="btn_othello">
+               <property name="text"><string>Othello</string></property>
+              </widget>
+             </item>
+
+             <item>
+              <widget class="QPushButton" name="btn_editProfile">
+               <property name="text"><string>Edit Profile</string></property>
+              </widget>
+             </item>
+
+            </layout>
+           </widget>
+          </item>
+
+          <item>
+           <spacer name="menuRightSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>120</width><height>20</height></size></property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <spacer name="menuBottomSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="page_checkers">
+       <layout class="QVBoxLayout" name="checkersLayout">
+        <property name="spacing"><number>12</number></property>
+
+        <item>
+         <layout class="QHBoxLayout" name="checkersHeader">
+          <item>
+           <widget class="QLabel" name="label_checkersTitle">
+            <property name="text"><string>Checkers</string></property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="checkersHeaderSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_backToMenu">
+            <property name="text"><string>Back to Main Menu</string></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+
+        <item>
+         <widget class="QGroupBox" name="group_gameSettings">
+          <property name="title"><string>Game Settings</string></property>
+          <layout class="QHBoxLayout" name="settingsRow">
+           <property name="spacing"><number>12</number></property>
+
+           <item>
+            <widget class="QRadioButton" name="radio_host">
+             <property name="text"><string>Host</string></property>
+            </widget>
+           </item>
+
+           <item>
+            <widget class="QRadioButton" name="radio_guest">
+             <property name="text"><string>Guest</string></property>
+            </widget>
+           </item>
+
+           <item>
+            <spacer name="settingsSpacer">
+             <property name="orientation"><enum>Qt::Horizontal</enum></property>
+             <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+            </spacer>
+           </item>
+
+           <item>
+            <widget class="QPushButton" name="btn_startGame">
+             <property name="text"><string>Start Game</string></property>
+            </widget>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <widget class="QGroupBox" name="group_history">
+          <property name="title"><string>History</string></property>
+          <layout class="QVBoxLayout" name="historyLayout">
+           <property name="spacing"><number>8</number></property>
+
+           <item>
+            <widget class="QTableWidget" name="table_history">
+             <property name="columnCount"><number>5</number></property>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+             <column/>
+            </widget>
+           </item>
+
+          </layout>
+         </widget>
+        </item>
+
+        <item>
+         <spacer name="checkersBottomSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint"><size><width>20</width><height>10</height></size></property>
+         </spacer>
+        </item>
+
+        <item>
+         <widget class="QPushButton" name="btn_logout">
+          <property name="text"><string>Logout</string></property>
+         </widget>
+        </item>
+
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="page_othello">
+       <layout class="QVBoxLayout" name="othelloRootLayout">
+        <property name="spacing"><number>12</number></property>
+
+        <item>
+         <widget class="QStackedWidget" name="othelloStack">
+
+          <!-- Setup page -->
+          <widget class="QWidget" name="page_othelloSetup">
+           <layout class="QVBoxLayout" name="othelloSetupLayout">
+            <property name="spacing"><number>12</number></property>
+
+            <item>
+             <widget class="QLabel" name="label_othelloTitle">
+              <property name="text"><string>Othello</string></property>
+              <property name="alignment"><set>Qt::AlignCenter</set></property>
+             </widget>
+            </item>
+
+            <item>
+             <widget class="QGroupBox" name="group_othelloSettings">
+              <property name="title"><string>Game Settings</string></property>
+              <layout class="QHBoxLayout" name="othelloSettingsRow">
+               <property name="spacing"><number>12</number></property>
+
+               <item>
+                <widget class="QRadioButton" name="radio_othello_host">
+                 <property name="text"><string>Host</string></property>
+                </widget>
+               </item>
+
+               <item>
+                <widget class="QRadioButton" name="radio_othello_guest">
+                 <property name="text"><string>Guest</string></property>
+                </widget>
+               </item>
+
+               <item>
+                <spacer name="othelloSettingsSpacer">
+                 <property name="orientation"><enum>Qt::Horizontal</enum></property>
+                 <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+                </spacer>
+               </item>
+
+               <item>
+                <widget class="QPushButton" name="btn_othello_start">
+                 <property name="text"><string>Start Game</string></property>
+                </widget>
+               </item>
+
+              </layout>
+             </widget>
+            </item>
+
+            <item>
+             <widget class="QPushButton" name="btn_othello_back">
+              <property name="text"><string>Back to Main Menu</string></property>
+             </widget>
+            </item>
+
+            <item>
+             <spacer name="othelloSetupBottomSpacer">
+              <property name="orientation"><enum>Qt::Vertical</enum></property>
+              <property name="sizeHint"><size><width>20</width><height>40</height></size></property>
+             </spacer>
+            </item>
+
+           </layout>
+          </widget>
+
+          <widget class="QWidget" name="page_othelloGame">
+           <layout class="QVBoxLayout" name="othelloGameLayout">
+            <property name="spacing"><number>12</number></property>
+
+            <item>
+             <layout class="QHBoxLayout" name="othelloGameTopRow">
+              <item>
+               <widget class="QLabel" name="label_othelloIngame">
+                <property name="text"><string>Othello - Game</string></property>
+               </widget>
+              </item>
+
+              <item>
+               <spacer name="othelloGameTopSpacer">
+                <property name="orientation"><enum>Qt::Horizontal</enum></property>
+                <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+               </spacer>
+              </item>
+
+              <item>
+               <widget class="QPushButton" name="btn_othello_exitGame">
+                <property name="text"><string>Exit</string></property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+
+            <item>
+             <widget class="QWidget" name="othelloGameContainer">
+              <layout class="QVBoxLayout" name="othelloGameContainerLayout"/>
+             </widget>
+            </item>
+
+           </layout>
+          </widget>
+
+         </widget>
+        </item>
+
+       </layout>
+      </widget>
+
+      <widget class="QWidget" name="page_editProfile"/>
+
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect><x>0</x><y>0</y><width>800</width><height>24</height></rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+
+ <resources/>
+ <connections/>
+</ui>
