@@ -11,6 +11,9 @@ class LoginWindow : public QMainWindow
 {
     Q_OBJECT
 
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
+
 public:
     explicit LoginWindow(QWidget *parent = nullptr);
     ~LoginWindow();
